@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        input{
+            width: 80%;
+            height: max-content;
+            text-align: right;
+            border: .2px solid greenyellow;
+            background-color: black;
+            color: white;
+            padding-right: 40px;
+            font-size: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        #show{
+            font-size: 40px;
+            color: blue;
+            font-weight: bold;
+            font-family: cambria;
+            border: 4px solid blue;
+            min-width: 200px;
+            min-height: 40px;
+            max-width: 230px;
+            height: max-content;
+            width: max-content;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            word-wrap: break-word;
+        }
+        #input2{
+            display: none;
+        }
+        #input1::placeholder{
+            font-size: 30px;
+            color:aqua;
+            font-style: italic;
+            word-break: break-word;
+        }
+        #calcu{
+            width: max-content;
+            height: 50px;
+            font-size: 40px;
+            color: blue;
+            font-weight: bold;
+            background-color: rgb(52, 255, 1);
+        }
+        body{
+            border: 5px solid aqua;
+            height: calc(max-content + 100px);
+            padding: 100px;
+        }
+        .show{
+            text-align: left;
+            font-size: 40px;
+            font-family: arial;
+            font-weight: bold;
+        }
+        @media (max-width:560px) {
+            input{
+                width: 90%;
+            }
+            #input1::placeholder{
+                color: transparent;
+            }
+            .show{
+                font-size: 20px;
+            }
+            ::placeholder{
+                font-size: 20px;
+            }
+            #show{
+                padding: 0;
+                width: 100%;
+            }
+            body{
+                padding: 10px;
+            }
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p class="show">How much do you want to deposit in (dollars)</p>
+            <input type="number" name="number1" id="input1" placeholder="how much you want to invest in dollars" required><br>
+            <input type="number" name="number2" id="input2" value="4.7" required><br>
+            <button onclick="calc()" id="calcu">
+                Calculate
+            </button>
+            <br><p id="show"></p>
+<script>
+    function calc(){
+        var month1 = document.getElementById('input1').value;
+        var month2 = document.getElementById('input2').value; 
+        let month1p = parseInt(month1);
+        let month2p = parseFloat(month2);
+        let multiply1 = month1p * month2p;
+        let text = document.getElementById('show');
+        text.innerHTML = 'your earnings at the end of three month is $' + multiply1
+
+        if ( multiply1 < 1 ){
+            text.innerHTML = 'Your earnings dont appear because theres no deposit'
+        }
+        else if ( month1 == '' ){
+            text.innerHTML = 'Your earnings dont appear because theres no deposit'
+            text.style.fontStyle = 'italic'
+        }
+    }
+</script>
+</body>
+</html>

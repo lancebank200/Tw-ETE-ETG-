@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+#body{
+    margin-top: 0;
+    display: block;
+    justify-content: center;
+    width: 350px;
+    text-align: left;
+    margin-top: 70px;
+    font-family: verdana;
+}
+#bodysignup{
+    margin-top: 0;
+    display: none;
+    justify-content: center;
+    width: 350px;
+    text-align: left;
+    margin-top: 70px;
+    font-family: verdana;
+    margin-bottom: 50vh;
+}
+body{
+    background-size: cover;
+    background: black;
+    margin-bottom: 80px;
+    scroll-snap-align: start;
+}
+#head{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+p{
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input{
+    width: 90%;
+    height: 45px;
+    margin-bottom: 30px;
+    border: .2px solid grey;
+    border-radius: 10px;
+    transition:all .3s ease-out;
+    transition-duration: 3s;
+    padding-left: 30px;
+}
+input:hover{
+    border: 2px solid blue;
+    font-weight: bold;
+}
+input::placeholder{
+    font-size: 15px;
+}
+#textshowLogin{
+    text-align: center;
+    color: red;
+    font-style: italic;
+    padding-top: 30px;
+}
+#textshowLogin1{
+    text-align: center;
+    color: red;
+    font-style: italic;
+    padding-top: 30px;
+}
+input:active{
+    border: 2px solid green;
+}
+a{
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    transition-duration: 2s;
+}
+.a{
+    color: black;
+    font-weight: bold;
+    font-family: arial;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    transition-duration: 2s;
+    background: white;
+    width: 20px;
+    margin-bottom: 40px;
+}
+a:hover{
+    color: aqua;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(30deg, grey,white,gray);
+    text-shadow: 1px 1px 1px white;
+    font-family: arial;
+    border: 3px solid white;
+    transition: all .3s ease;
+    border-radius: 10px;
+}
+button:hover{
+    border: 2px solid blue;
+}
+.button:hover{
+    background-image: url(button.JPG);
+    background-color: black;
+}
+.back{
+    width: max-content;
+    height: max-content;
+    font-size: 40px;
+    margin-left: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#su{
+    color: white;
+}
+@media(max-length: 560px){
+    #body{
+        width: 80%;
+    }    
+    #head{
+        font-size: 20px;
+    }
+
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get started</title>
+</head>
+<body>
+    <div class="backbtn">
+        <button class="back" onclick="Back()">
+            &LessLess;
+        </button>
+    </div>
+<center>
+<div id="body">
+    <div id="head">
+        Welcome back
+    </div>
+    <div id="p">
+        Welcome back! Please enter your details.
+    </div>
+    <div id="form">
+        <form action="">
+            <p>Email</p>
+            <input type="email" id="Emaillog" placeholder="Enter your email" required><br>
+            <p>Password</p>
+            <input type="password" id="passwordlog" placeholder="Password" required><br>
+            <a href="">Forgot Password</a><br>
+            <button type="button" onclick="loGin()">
+                Login
+            </button>
+            <p id="textshowLogin"></p>
+            <br><br><br>
+            <div class="signup" id="su">
+                Don't have an account? <button id="a" onclick="apple()">Signup for free</button>
+            </div>
+        </form>
+    </div>
+</div>
+</center>
+<center>
+    <div id="bodysignup">
+        <div id="head">
+            Welcome back
+        </div>
+        <div id="p">
+            Welcome back! Please enter your details.
+        </div>
+        <div id="form">
+            <form action="">
+                <p>Full Name</p>
+                <input type="text" id="signuser" placeholder="Enter your Full name" required><br>
+                <p>Email</p>
+                <input type="email" placeholder=" Enter your email" required><br>
+                <p>Password</p>
+                <input type="password" id="normalp" placeholder="Enter a strong password" required><br>
+                <p>Confirm Password</p>
+                <input type="password" id="confirmp" placeholder="Confirm your password" required><br>
+                <button type="button" onclick="signUp()">
+                    Signup
+                </button>
+                <p id="textshowLogin1"></p>
+                <br><br>
+                <br>
+            </form>
+            
+            <div class="signup" id="su">
+                Already have an account? <button onclick="Apple()">Login Here</button>
+            </div>
+        </div>
+    </div>
+    </center>
+<script type="text/javascript">
+    function apple(){
+        let signupbody = document.getElementById('bodysignup');
+        let signupclose = document.getElementById('body');
+
+        signupbody.style.display = 'block';
+        signupclose.style.display = 'none'
+    }
+    function Apple(){
+        let signupbody = document.getElementById('bodysignup');
+        let signupclose = document.getElementById('body');
+
+        signupbody.style.display = 'none';
+        signupclose.style.display = 'block'
+    }
+    function Back(){
+        window.location = 'index.html'
+    }
+
+</script>
+</body>
+</html>

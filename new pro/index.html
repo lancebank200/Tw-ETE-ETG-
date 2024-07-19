@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <header>
+            <div class="h1">
+                <h1>
+                    &hearts; Chord &bigstar;
+                </h1>
+            </div>
+            <div class="midhead">
+                <nav class="nav">
+                    <ul class="ul">
+                        <li><a href="">Product</a></li>
+                        <li><a> Price</a></li>
+                        <li><a>Support</a></li>
+                        <li><a>Feedback</a></li>
+                        <li><a>Help?</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="end">
+                <button>Home</button>
+                <button onclick="getstarted()">Get started</button>
+            </div>
+            <button class="sidebar" onclick="side()">&NotRightTriangleEqual;</button>
+        </header>
+        <main>
+            <center>
+                <h2>
+                    <span class="one">
+                        An investment Platform
+                    </span><br>
+                    <span class="two">
+                        filled with satisfaction
+                    </span>
+                </h2><br>
+                <p>
+                    Open an account 
+                    right on your Device <br>
+                    and make your money go further, <br>
+                    invest with confidence - our platform <br>
+                    is secure and reliable. <br><br>
+                    Transform your finances with <br>
+                    our innovative approaches.
+                </p>
+                <div class="getstarted">
+                    <form action="">
+                    <input type="email" placeholder="Email address" class="email" required>
+                    <button class="getstartedbtn" onclick="getstarted()" type="submit">
+                        Get started
+                    </button></form>
+                </div>
+                <div class="arrow">
+                    &DownArrow;
+                </div>
+                <div class="calculator">
+                    <h1 class="calculatorh">Use the calculator to check your profits at the  end of three months</h1>
+                    <div class="arrow">
+                        &DownArrow;
+                    </div>
+                    <p class="show">How much do you want to deposit in (dollars) <br><span class="arrow2">&DoubleDownArrow;</span> </p>
+                    <input type="number" name="number1" id="input1" placeholder="how much you want to invest in dollars" required><br>
+                    <input type="number" name="number2" id="input2" value="4.7" required><br>
+                    <button onclick="calc()" id="calcu">
+                        Calculate
+                    </button>
+                    <br><p id="show"></p>
+                        </div> 
+            <button id="outsidebtn" onclick="closee()"></button>
+                <div class="pain" id="pain">
+                    <p class="pp">
+                        
+                    </p>
+                </div>
+            </center>
+        </main>
+        <div class="sidebarA">
+            <nav class="straightnav">
+                <ul class="straight">
+                    <li><h1>&bigstar;Chord &hearts;</h1></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Feedback</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="getstarted.html">Get started</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="division">
+            <button class="btnremove" onclick="remove()">&RightArrow;<br>&RightArrow;<br>&rightarrow;</button>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
